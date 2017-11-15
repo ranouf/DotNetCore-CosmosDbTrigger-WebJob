@@ -23,4 +23,13 @@
     <ProjectReference Include="..\AzureWebJob.Infrastructure\AzureWebJob.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="run.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="settings.job">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
