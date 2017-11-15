@@ -1,5 +1,6 @@
 ﻿using AzureWebJob.Core.Configuration;
 using AzureWebJob.Core.Samples;
+using Microsoft.ApplicationInsights;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -10,21 +11,28 @@ namespace AzureWebJob.App
 {
 	class App
 	{
+		private readonly TelemetryClient _telemetryClient;
 		private readonly ISampleManager _sampleManager;
-		private readonly SampleSettings _appSettings;
+		private readonly SampleSettings _sampleSettings;
 
 		public App(
+			TelemetryClient telemetryClient,
 			ISampleManager sampleManager,
-			IOptions<SampleSettings> appSettings
+			IOptions<SampleSettings> sampleSettings
 		)
 		{
+			_telemetryClient = telemetryClient;
 			_sampleManager = sampleManager;
-			_appSettings = appSettings.Value;
+			_sampleSettings = sampleSettings.Value;
 		}
 
 		public async Task RunAsync()
 		{
-			Console.WriteLine($"{await _sampleManager.SayHello()} {_appSettings.SampleValue}");
+			_telemetryClient.TrackTrace("App Start");
+			Console.WriteLine($"ApplicationInsight status:{!string.IsNullOrEmpty(_telemetryClient.InstrumentationKey) } ({_telemetryClient.InstrumentationKey})");
+			Console.WriteLine($"Sample status:{!string.IsNullOrEmpty(await _sampleManager.SayHello()) }");
+			Console.WriteLine($"Configuration status:{!string.IsNullOrEmpty(_sampleSettings.SampleValue) }");
+			_telemetryClient.TrackTrace("App Stop");
 		}
 	}
 }

@@ -3,8 +3,10 @@ using Autofac.Extensions.DependencyInjection;
 using AzureWebJob.Core;
 using AzureWebJob.Core.Configuration;
 using AzureWebJob.Infrastructure;
+using Microsoft.ApplicationInsights;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using System;
 using System.IO;
 
@@ -31,6 +33,9 @@ namespace AzureWebJob.App
 			// App settings
 			services.AddOptions();
 			services.Configure<SampleSettings>(Configuration.GetSection("SampleSettings"));
+			services.Configure<ApplicationInsightsSettings>(Configuration.GetSection("ApplicationInsights"));
+
+			services.AddSingleton<TelemetryClient>();
 
 			// Add app
 			services.AddTransient<App>();
