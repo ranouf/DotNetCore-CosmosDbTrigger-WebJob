@@ -1,12 +1,15 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace AzureWebJob.App
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
+    public class Program
+	{
+		public static void Main(string[] args)
+		{
+			var startup = new Startup();
+			IServiceProvider serviceProvider = startup.ConfigureServices(new ServiceCollection());
+			serviceProvider.GetService<App>().RunAsync().Wait();
+		}
+	}
 }

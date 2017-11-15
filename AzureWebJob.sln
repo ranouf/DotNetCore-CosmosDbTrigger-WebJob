@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureWebJob.Core", "AzureWebJob.Core\AzureWebJob.Core.csproj", "{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureWebJob.Infrastructure", "AzureWebJob.Infrastructure\AzureWebJob.Infrastructure.csproj", "{8933BA93-7F87-41CC-9C5D-682ACE7FB640}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{74C3EDD2-0762-4469-BAC0-69D847E79148}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74C3EDD2-0762-4469-BAC0-69D847E79148}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74C3EDD2-0762-4469-BAC0-69D847E79148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8933BA93-7F87-41CC-9C5D-682ACE7FB640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8933BA93-7F87-41CC-9C5D-682ACE7FB640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8933BA93-7F87-41CC-9C5D-682ACE7FB640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8933BA93-7F87-41CC-9C5D-682ACE7FB640}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
