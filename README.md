@@ -26,5 +26,5 @@ Publish your App Console to a local folder, <i>bin\Release\PublishOutput</i> by 
 #### Create a new WebApp
 Nothing different than a classic Web, enter a name and the select the options you need, then create.
 
-### Add a new WebJob
+#### Add a new WebJob
 Enter a name, select the Zip file, select triggered, let triggers to manual, this option will overwritten if you have set a <i>settings.job</i> file,
