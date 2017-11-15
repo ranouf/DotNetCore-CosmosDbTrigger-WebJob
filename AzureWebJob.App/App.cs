@@ -25,7 +25,6 @@ namespace AzureWebJob.App
 		public async Task RunAsync()
 		{
 			Console.WriteLine($"{await _sampleManager.SayHello()} {_appSettings.SampleValue}");
-			Console.ReadKey();
 		}
 	}
 }
