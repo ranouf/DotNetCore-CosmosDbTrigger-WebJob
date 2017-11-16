@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AzureWebJob.App
@@ -28,11 +29,14 @@ namespace AzureWebJob.App
 
 		public async Task RunAsync()
 		{
-			_telemetryClient.TrackTrace("App Start");
-			Console.WriteLine($"ApplicationInsight status:{!string.IsNullOrEmpty(_telemetryClient.InstrumentationKey) } ({_telemetryClient.InstrumentationKey})");
+			_telemetryClient.TrackTrace("Operations running");
+			Console.WriteLine($"ApplicationInsight status:{!string.IsNullOrEmpty(_telemetryClient.InstrumentationKey) }");
 			Console.WriteLine($"Sample status:{!string.IsNullOrEmpty(await _sampleManager.SayHello()) }");
 			Console.WriteLine($"Configuration status:{!string.IsNullOrEmpty(_sampleSettings.SampleValue) }");
-			_telemetryClient.TrackTrace("App Stop");
+			_telemetryClient.TrackTrace("Operations finished ");
+
+			_telemetryClient.Flush();
+			Thread.Sleep(1000); // Need to wait to send tracks to Application Insights
 		}
 	}
 }
