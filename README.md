@@ -1,7 +1,7 @@
 # AzureWebJob
 
 ## Presentation
-On this repository, you will have an .Net Core 2.0 App Console using Dependency Injection.
+On this repository, you will have an .Net Core 2.0 App Console using Dependency Injection and Application Insights.
 This App Console will be compatible to Azure WebJobs.
 
 ## How to convert a .Net Core App Console to an Azure WebJob?
