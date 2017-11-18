@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDbTriggerWebJob.App", "CosmosDbTriggerWebJob.App\CosmosDbTriggerWebJob.App.csproj", "{74C3EDD2-0762-4469-BAC0-69D847E79148}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6319FD0F-0D38-4DB9-A451-13700FFBB949}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDbTriggerWebJob.Core", "CosmosDbTriggerWebJob.Core\CosmosDbTriggerWebJob.Core.csproj", "{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDbTriggerWebJob.Infrastructure", "CosmosDbTriggerWebJob.Infrastructure\CosmosDbTriggerWebJob.Infrastructure.csproj", "{8933BA93-7F87-41CC-9C5D-682ACE7FB640}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74C3EDD2-0762-4469-BAC0-69D847E79148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C3EDD2-0762-4469-BAC0-69D847E79148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C3EDD2-0762-4469-BAC0-69D847E79148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C3EDD2-0762-4469-BAC0-69D847E79148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A8608C-E73D-4A8D-848E-C554B37B9EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8933BA93-7F87-41CC-9C5D-682ACE7FB640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8933BA93-7F87-41CC-9C5D-682ACE7FB640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8933BA93-7F87-41CC-9C5D-682ACE7FB640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8933BA93-7F87-41CC-9C5D-682ACE7FB640}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3138559-03CA-4701-B22D-9B21BF4C1861}
+	EndGlobalSection
+EndGlobal
