@@ -43,12 +43,8 @@ It will allow you to log the data entered in the database.
 
 ### Integration
 In 'Integrate' section, add a new Output, select 'AzureQueueStorage' and complete the field before saving.
-Note: If you want to 
-
-### Rename the QueueName
-In CosmosDbTriggerWebJob.App, 
-
+Note: The default Queue Name is 'outqueue'. Please it like this to trigger the command in the app.
 
 ### Run my code
-Final step, run the Cos
+Final step, run the App
 
