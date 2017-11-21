@@ -50,5 +50,5 @@ In CosmosDbTriggerWebJob.App,
 
 
 ### Run my code
-Final step, run the Cos
+Final step, run the App
 
