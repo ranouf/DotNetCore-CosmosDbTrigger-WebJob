@@ -15,9 +15,8 @@ namespace CosmosDbTriggerWebJob.App
 			
 			var jobHostConfiguration = new JobHostConfiguration()
 			{
-				JobActivator = new JobActivator(serviceProvider)
+				JobActivator = new JobActivator(serviceProvider),
 			};
-			jobHostConfiguration.Queues.BatchSize = 1;
 
 			var host = new JobHost(jobHostConfiguration);
 			host.RunAndBlock();

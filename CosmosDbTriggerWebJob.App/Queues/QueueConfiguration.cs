@@ -6,6 +6,11 @@ namespace CosmosDbTriggerWebJob.App.Queues
 {
     public static class QueueConfiguration
 	{
-		public const string CANDIDATE_QUEUE_NAME = "candidates";
+		// How to find the Queue Name:
+		// - open the App Function,
+		// - select the Azure Function,
+		// - then Integrate,
+		// - then Output.
+		public const string QUEUE_NAME = "outqueue";
 	}
 }

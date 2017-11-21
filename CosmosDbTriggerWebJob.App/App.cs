@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace CosmosDbTriggerWebJob.App
 {
-	public class App
+	public class App :IDisposable
 	{
 		private readonly TelemetryClient _telemetryClient;
 		private readonly ISampleManager _sampleManager;
@@ -30,18 +30,17 @@ namespace CosmosDbTriggerWebJob.App
 			_sampleSettings = sampleSettings.Value;
 		}
 
-		public async Task DoSomethingOnAQueue([QueueTrigger(QueueConfiguration.CANDIDATE_QUEUE_NAME)] string notification, TextWriter textWriter)
+		public void Dispose()
 		{
-			Console.WriteLine(notification);
+			_telemetryClient.Flush();
 		}
 
-		////public void ProcessNotifications([QueueTrigger(NOTIFICATION_QUEUE_NAME)] string notification, TextWriter textWriter)
-		////{
-		////	Console.WriteLine(notification);
-		////}
-		//public void ProcessQueueMessage([QueueTrigger(NOTIFICATION_QUEUE_NAME)] string logMessage, TextWriter logger)
-		//{
-		//	Console.WriteLine(logMessage);
-		//}
+		// IMPORTANT: Please verify that your Queue Name match with your Azure configuration
+		public async Task DoSomethingOnAQueue([QueueTrigger(QueueConfiguration.QUEUE_NAME)] string notification, TextWriter textWriter)
+		{
+			_telemetryClient.TrackTrace("Start DoSomethingOnAQueue");
+			Console.WriteLine(notification);
+			_telemetryClient.TrackTrace("End DoSomethingOnAQueue");
+		}
 	}
 }
